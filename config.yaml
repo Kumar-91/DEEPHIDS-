@@ -1,0 +1,35 @@
+gui:
+  refresh_interval: 1000
+
+alerts:
+  cpu_threshold: 80
+  ram_threshold: 80
+  email_alerts: true          # set false to disable email sending
+  smtp:
+    host: "smtp.gmail.com"  # e.g. smtp.gmail.com
+    port: 587
+    username: "hidskali@gmail.com"
+    password: "ujazbljtbotpocst"  # use app password for Gmail
+    use_tls: true
+    from_addr: hidskali@gmail.com"
+    to_addrs:
+      - hidskali@gmail.com"
+
+files:
+  watch_paths:
+    - /etc
+    - /var/log
+
+login:
+  auth_log_path: "/var/log/auth.log"   # path to system auth log on Debian/Kali
+  watch_failed: true                   # alert on failed attempts
+  watch_success: true                  # alert on successful logins
+  suspicious_threshold: 5              # example: >5 failed attempts could be suspicious
+#ignore:
+ # processes:
+  #  - firefox
+   # - firefox-esr
+  #paths:
+   # - /usr/lib/firefox
+    #- /home/kali/.mozilla/firefox
+    #- /home/kali/hids/logs/alerts.log
